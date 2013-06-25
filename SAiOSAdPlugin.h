@@ -36,8 +36,8 @@
 @property (assign)				BOOL isLandscape;
 
 
-- (void) prepare:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) showAd:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) orientationChanged:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void) prepare:(CDVInvokedUrlCommand*)command;
+- (void) showAd:(CDVInvokedUrlCommand*)command;
+- (void) orientationChanged:(CDVInvokedUrlCommand*)command;
 
 @end

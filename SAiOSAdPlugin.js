@@ -25,7 +25,7 @@ function SAiOSAdPlugin()
  */
 SAiOSAdPlugin.prototype.orientationChanged = function()
 {
-    cordovaRef.exec("SAiOSAdPlugin.orientationChanged", window.orientation);
+    cordovaRef.exec(null, null, "iAdPlugin", "orientationChanged", [window.orientation]);
 }
 
 /**
@@ -33,7 +33,7 @@ SAiOSAdPlugin.prototype.orientationChanged = function()
  */
 SAiOSAdPlugin.prototype.showAd = function(show)
 {
-    cordovaRef.exec("SAiOSAdPlugin.showAd", show);
+    cordovaRef.exec(null, null, "iAdPlugin", "showAd", [show]);
 }
 
 /**
@@ -45,7 +45,7 @@ SAiOSAdPlugin.prototype.prepare = function(atBottom)
 		atBottom = false;
 	}
     
-	cordovaRef.exec("SAiOSAdPlugin.prepare", atBottom);
+	cordovaRef.exec(null, null, "iAdPlugin", "prepare", [atBottom]);
 }
 
 /**

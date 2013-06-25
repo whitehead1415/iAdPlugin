@@ -1,4 +1,4 @@
-/*
+/*     
 
 Cordova v1.5.0 Support added 2012 @RandyMcMillan
 README.md for install notes
@@ -25,7 +25,7 @@ function SAiOSAdPlugin()
  */
 SAiOSAdPlugin.prototype.orientationChanged = function()
 {
-    cordovaRef.exec("SAiOSAdPlugin.orientationChanged", window.orientation);
+    cordovaRef.exec(null, null, "iAdPlugin", "orientationChanged", [window.orientation]);
 }
 
 /**
@@ -33,7 +33,7 @@ SAiOSAdPlugin.prototype.orientationChanged = function()
  */
 SAiOSAdPlugin.prototype.showAd = function(show)
 {
-    cordovaRef.exec("SAiOSAdPlugin.showAd", show);
+    cordovaRef.exec(null, null, "iAdPlugin", "showAd", [show]);
 }
 
 /**
@@ -44,8 +44,8 @@ SAiOSAdPlugin.prototype.prepare = function(atBottom)
 	if (!atBottom) {
 		atBottom = false;
 	}
-
-	cordovaRef.exec("SAiOSAdPlugin.prepare", atBottom);
+    
+	cordovaRef.exec(null, null, "iAdPlugin", "prepare", [atBottom]);
 }
 
 /**
@@ -55,7 +55,7 @@ SAiOSAdPlugin.install = function()
 {
 	if ( !window.plugins ) {
 		window.plugins = {};
-	}
+	} 
 	if ( !window.plugins.iAdPlugin ) {
 		window.plugins.iAdPlugin = new SAiOSAdPlugin();
 	}

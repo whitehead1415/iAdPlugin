@@ -70,9 +70,9 @@
     }
 }
 
-- (void) orientationChanged:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void) orientationChanged:(CDVInvokedUrlCommand*)command;
 {
-    NSInteger orientation = [[arguments objectAtIndex:0] integerValue];
+    NSInteger orientation = [[command.arguments objectAtIndex:0] integerValue];
 
     switch (orientation) {
         // landscape
@@ -97,25 +97,25 @@
     }
 }
 
-- (void) prepare:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+- (void) prepare:(CDVInvokedUrlCommand*)command;
 {
-	NSUInteger argc = [arguments count];
+	NSUInteger argc = [command.arguments count];
 	if (argc > 1) {
 		return;
 	}
     
-	NSString* atBottomValue = [arguments objectAtIndex:0];
+	NSString* atBottomValue = [command.arguments objectAtIndex:0];
 	[self __prepare:[atBottomValue boolValue]];
 }
 
-- (void) showAd:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+- (void) showAd:(CDVInvokedUrlCommand*)command;
 {
-	NSUInteger argc = [arguments count];
+	NSUInteger argc = [command.arguments count];
 	if (argc > 1) {
 		return;
 	}
 	
-	NSString* showValue = [arguments objectAtIndex:0];
+	NSString* showValue = [command.arguments objectAtIndex:0];
 	[self __showAd:[showValue boolValue]];
 }
 

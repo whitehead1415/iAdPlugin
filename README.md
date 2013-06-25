@@ -5,11 +5,11 @@ by Shazron Abdullah
 
 Using this plugin requires [Cordova](http://github.com/apache/incubator-cordova-ios) and iAd. iAd requires at least the [iOS 4 SDK](http://developer.apple.com/iphone).
 
-1. Make sure your Cordova Xcode project has been [updated for Cordova 1.6.0](https://github.com/apache/incubator-cordova-ios/blob/master/guides/Cordova%20Plugin%20Upgrade%20Guide.md)
-2. Add the "iAd" framework to your Frameworks folder, and set it to be weak linked (see "Weak Linking the iAd Framework" section below)
+1. Make sure your Cordova Xcode project has been [updated for Cordova 2.8]
+2. Add the "iAd" framework to your Frameworks folder
 3. Add the .h and .m files to your Plugins folder in your project (as a Group "yellow folder" not a Reference "blue folder")
 4. Add the .js files to your "www" folder on disk, and add reference(s) to the .js files as &lt;script&gt; tags in your html file(s)
-5. In **Cordova.plist** (1.5.0 or greater) or **PhoneGap.plist** (1.4.1 or lesser), under the **Plugins** section, add an idential key and value of **"SAiOSAdPlugin"**
+5. In config.xml add a feature tag with value of "SAiOSAdPlugin" (see config.xml)
 6. See the sample index.html
 7. Make sure you check the **"RELEASE NOTES"** section below!
 8. Your App must be added to [https://iad.apple.com/itcportal/](https://iad.apple.com/itcportal/) to make $
